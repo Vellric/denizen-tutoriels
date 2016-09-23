@@ -1,0 +1,38 @@
+# Les tags sont une chose que vous ne pourrez vous passer dans Denizen, avec le temps.
+# Souvenez-vous de ceux-ci comme étant quelque chose qui doit être construit selon vos besoins.
+# Par exemple, un tag simple est <player>. Il va renvoyer le dPlayer object du joueur. Vous verrez ce tag des milliers de fois dans votre carrière de codeur Denizen.
+# Voici un exemple :
+MyScript:
+    type: task
+    script:
+    - narrate "Hello World"
+    - narrate "Hello World, <player>!"
+    
+# Si vous désirez tester ce bout de code dans votre serveur, libre à vous. Sinon, sachez que cela rendra « Hello World, p@e7c4fd60-772b-4c53-987f-f387e83189d0 ». (ce mélange de chiffres et de lettres changera en fonction du joueur)
+# Rajoutons un morceau à notre construction de tag: nous allons ajouter .name à la fin, comme ceci: <player.name>
+
+MyScript:
+    type: task
+    script:
+    - narrate "Hello World"
+    - narrate "Hello World, <player.name>!"
+    
+# Si vous avez testé ce tag, vous avez vu qu'il a renvoyé votre nom de joueur au lieu d'un ID. Ce n'était pas trop compliqué : on a ajouté .name à la fin de notre tag. Alors sachez qu'une majorité
+# de vos tags dans Denizen seront composés de cette manière.
+# Essayons un petit bout de code, rien qu'un peu plus compliqué cette fois. Essayons d'avoir un nombre généré au hasard. Pour l'instant, il ne vous sera pas très utile mais cela viendra avec le temps...
+
+MyScript:
+    type: task
+    script:
+    - narrate "Hello World"
+    - narrate "Hello World, <player>!"
+    - narrate "Votre chiffre chanceux est <util.random.int[3].to[20]>"
+    
+# Ce tag est certes un peu plus dur à comprendre, il est tout de même simple. Il est plus difficule de vous expliquer chaque partie de ce tag pour le moment, alors tâchez simplement de retenir
+# que celui permet de générer un chiffre au hasard. La valeur '3' dans notre tag est le chiffre le plus bas qui peut être généré au hasard, et la valeur '20' est notre chiffre le plus haut.
+# Comme dit plus haut, cela vous sera certainement utile plus tard.
+
+#############
+#### Cette introduction aux tags se terminera ici. Il me serait pratiquement impossible de tous les passer en revue, car il y en a énormément et ils peuvent être mis sous toutes sortes de formes.
+#### Nous pourrons voir un peu plus tard des explications plus avancées sur les tags.
+#############
